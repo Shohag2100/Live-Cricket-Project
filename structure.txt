@@ -1,0 +1,49 @@
+cricket_website/
+├── manage.py
+├── requirements.txt
+├── .env
+├── README.md
+│
+├── config/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+│
+├── accounts/              # User authentication
+│   ├── models.py
+│   ├── serializers.py
+│   ├── views.py
+│   ├── urls.py
+│   └── admin.py
+│
+├── cricket/               # Cricket data & scores
+│   ├── models.py
+│   ├── serializers.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── admin.py
+│   ├── services/
+│   │   ├── cricapi_service.py
+│   │   ├── youtube_service.py
+│   │   └── cache_service.py
+│   └── tasks.py
+│
+├── chatbot/               # AI Chatbot
+│   ├── models.py
+│   ├── serializers.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── consumers.py
+│   ├── routing.py
+│   ├── services/
+│   │   ├── ai_model.py
+│   │   ├── intent_classifier.py
+│   │   └── response_generator.py
+│   └── training_data/
+│       └── sports_intents.json
+│
+├── media/
+├── staticfiles/
+└── postgrSQL

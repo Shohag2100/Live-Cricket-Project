@@ -1,0 +1,21 @@
+:root{
+  --bg:#fff6ef;
+  --card:#ffffff;
+  --accent:#ff6b6b;
+  --muted:#6b7a86;
+  --teal:#2ab7ca;
+}
+body{margin:0;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#fff 60%);color:#0b1a2b}
+.hero{padding:80px 20px;text-align:left}
+.hero-inner{max-width:1000px;margin:0 auto;display:flex;gap:24px;align-items:center}
+.hero h1{font-size:2.4rem;margin:0 0 12px;color:var(--accent)}
+.lead{color:var(--muted);font-size:1.05rem}
+.cta-row{display:flex;gap:12px}
+.btn{display:inline-block;padding:10px 18px;border-radius:12px;background:var(--card);color:var(--teal);text-decoration:none;border:1px solid rgba(11,26,43,0.06)}
+.btn.primary{background:var(--accent);color:#fff;font-weight:700}
+.theme-switcher{position:absolute;top:18px;right:18px}
+.features{display:flex;gap:20px;max-width:1000px;margin:40px auto;padding:0 20px}
+.feature{background:linear-gradient(180deg,#fff,#fff);padding:20px;border-radius:12px;flex:1;box-shadow:0 12px 30px rgba(11,26,43,0.06)}
+.feature h2{margin-top:0;color:var(--teal)}
+.site-foot{text-align:center;padding:28px 0;color:var(--muted)}
+@media (max-width:700px){.hero-inner{flex-direction:column}.hero h1{font-size:1.6rem}}

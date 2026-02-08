@@ -1,0 +1,81 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome — Cricket Stream & AI Chat</title>
+    <link id="theme-css" data-base-path="{% static 'themes/' %}" rel="stylesheet" href="{% static 'themes/home_b.css' %}">
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="theme-switcher">
+          <label>Theme:</label>
+          <button data-theme="B" class="theme-btn">Light</button>
+          <button data-theme="C" class="theme-btn">Dark</button>
+        </div>
+        <h1>Welcome to the New Create Era</h1>
+        <p class="lead">Find live cricket streams, latest updates, and our AI chatbot — ask anything about cricket and get instant answers.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="/api/chatbot/">Open AI Chatbot</a>
+          <a class="btn" href="/api/cricket/">Browse Streams</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="features">
+      <div id="live-matches" class="matches-container" style="max-width:1000px;margin:24px auto;padding:0 20px;color:inherit">
+        <!-- Live matches will be injected here -->
+      </div>
+
+      <div class="feature">
+        <h2>AI-Powered Answers</h2>
+        <p>Ask match stats, player info, or streaming links. Our bot uses curated rules with optional AI fallback.</p>
+      </div>
+      <div class="feature">
+        <h2>Live Streams</h2>
+        <p>Discover the latest live streams and highlights aggregated from multiple sources.</p>
+      </div>
+      <div class="feature">
+        <h2>Community & Feedback</h2>
+        <p>Rate responses and help improve the assistant over time.</p>
+      </div>
+    </section>
+
+    <footer class="site-foot">
+      <p>© New Create Era — Cricket & AI · Built with Django</p>
+    </footer>
+
+    <script>
+      // Theme loader: check URL param ?theme=B/C, fallback to localStorage,
+      // otherwise respect user's system color-scheme (light -> B, dark -> C)
+      function getThemeFromUrlOrStorage(){
+        const params = new URLSearchParams(window.location.search);
+        const t = params.get('theme');
+        if(t && ['B','C'].includes(t)) return t;
+        const saved = localStorage.getItem('site_theme');
+        if(saved && ['B','C'].includes(saved)) return saved;
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        return prefersDark ? 'C' : 'B';
+      }
+
+      function setTheme(theme){
+        const link = document.getElementById('theme-css');
+        link.href = link.dataset.basePath + `home_${theme.toLowerCase()}.css`;
+        localStorage.setItem('site_theme', theme);
+        // update active button
+        document.querySelectorAll('.theme-btn').forEach(b=>b.classList.toggle('active', b.dataset.theme===theme));
+      }
+
+      document.addEventListener('DOMContentLoaded', ()=>{
+        const theme = getThemeFromUrlOrStorage();
+        setTheme(theme);
+        document.querySelectorAll('.theme-btn').forEach(btn=>{
+          btn.addEventListener('click', ()=> setTheme(btn.dataset.theme));
+        });
+      });
+    </script>
+    <script src="{% static 'js/cricket.js' %}"></script>
+  </body>
+</html>

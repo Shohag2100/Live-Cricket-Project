@@ -1,0 +1,231 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi", "Hello", "Hey", "Good morning", "Good evening",
+        "What's up", "How are you", "Greetings", "Sup", "Yo"
+      ],
+      "responses": [
+        "Hello! Welcome to Cricket Live! How can I help you today?",
+        "Hi there! Looking for live cricket scores or streams?",
+        "Hey! I can help you with live cricket matches, scores, and streams. What would you like to know?",
+        "Greetings! Ready to catch some cricket action?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye", "Goodbye", "See you later", "See you", "Talk to you later",
+        "Gotta go", "Catch you later", "Farewell", "Take care"
+      ],
+      "responses": [
+        "Goodbye! Enjoy the cricket!",
+        "See you later! Don't miss the live action!",
+        "Take care! Come back for more cricket updates!",
+        "Bye! Keep watching!"
+      ]
+    },
+    {
+      "tag": "live_matches",
+      "patterns": [
+        "Show me live matches", "What matches are live",  "Any live cricket",
+        "Current matches", "Live cricket now", "Which matches are on",
+        "What's playing now", "Live games", "Show live cricket",
+        "Are there any live matches", "What's happening now"
+      ],
+      "responses": [
+        "I'll fetch the current live matches for you! Use the 'Current Matches' section to see all live cricket.",
+        "Let me show you the live matches happening right now!",
+        "Here are the live cricket matches available now. Check the live scores section!",
+        "Getting live match information for you..."
+      ],
+      "action": "get_live_matches"
+    },
+    {
+      "tag": "live_score",
+      "patterns": [
+        "What's the score", "Show me the score", "Current score",
+        "Live score", "Score update", "Match score", "How many runs",
+        "What's happening in the match", "Score please", "Tell me the score"
+      ],
+      "responses": [
+        "I'll get you the live score! Which match are you interested in?",
+        "Getting the latest score update for you...",
+        "Let me fetch the current match score!",
+        "Score coming right up! Which team are you following?"
+      ],
+      "action": "get_score"
+    },
+    {
+      "tag": "watch_live",
+      "patterns": [
+        "How can I watch", "Where to watch", "Live stream",
+        "Watch cricket online", "Stream cricket", "Watch live cricket",
+        "Where is it streaming", "Can I watch online", "Show me streams",
+        "YouTube live", "Watch match live"
+      ],
+      "responses": [
+        "I can help you find live streams! Check our Streams section for YouTube live cricket.",
+        "Looking for live streams? I'll show you available YouTube streams!",
+        "You can watch live cricket streams in our Streams section. Let me help you find one!",
+        "I'll find live cricket streams for you on YouTube!"
+      ],
+      "action": "get_streams"
+    },
+    {
+      "tag": "team_search",
+      "patterns": [
+        "India match", "Pakistan cricket", "Australia playing",
+        "England cricket", "New Zealand match", "South Africa game",
+        "West Indies cricket", "Bangladesh match", "Sri Lanka playing",
+        "Afghanistan cricket", "When is India playing", "Find team match"
+      ],
+      "responses": [
+        "Let me find matches for that team!",
+        "Searching for matches involving that team...",
+        "I'll look up the team's matches for you!",
+        "Finding cricket matches for your favorite team!"
+      ],
+      "action": "search_team"
+    },
+    {
+      "tag": "tournament_info",
+      "patterns": [
+        "IPL", "World Cup", "T20 World Cup", "ODI World Cup",
+        "Champions Trophy", "Asia Cup", "Big Bash", "CPL",
+        "The Hundred", "Pakistan Super League", "BPL", "LPL",
+        "Tournament info", "Show tournaments", "Cricket leagues"
+      ],
+      "responses": [
+        "Looking for tournament information? I can help with that!",
+        "I'll find details about that tournament for you!",
+        "Let me get you information about cricket tournaments!",
+        "Searching for tournament matches and updates..."
+      ],
+      "action": "get_tournament_info"
+    },
+    {
+      "tag": "player_info",
+      "patterns": [
+        "Tell me about player", "Player stats", "Player information",
+        "Virat Kohli", "Rohit Sharma", "Babar Azam", "Steve Smith",
+        "Kane Williamson", "Joe Root", "Player details", "Cricketer info"
+      ],
+      "responses": [
+        "I can fetch player information for you!",
+        "Let me get details about that player...",
+        "Searching for player stats and information!",
+        "I'll find information about that cricketer!"
+      ],
+      "action": "get_player_info"
+    },
+    {
+      "tag": "schedule",
+      "patterns": [
+        "Match schedule", "Upcoming matches", "Future matches",
+        "When is next match", "Cricket calendar", "Match fixtures",
+        "Upcoming cricket", "What's coming up", "Next games"
+      ],
+      "responses": [
+        "Let me show you the upcoming cricket schedule!",
+        "I'll fetch the match schedule for you!",
+        "Here's what's coming up in cricket!",
+        "Getting upcoming match fixtures..."
+      ],
+      "action": "get_schedule"
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "Help", "What can you do", "Help me", "How do you work",
+        "Features", "Capabilities", "Commands", "What do you know",
+        "How to use", "Guide me"
+      ],
+      "responses": [
+        "I can help you with:\n- Live cricket scores\n- Match schedules\n- Live streaming links\n- Player information\n- Tournament details\n- Team matches\nJust ask me anything about cricket!",
+        "I'm your cricket assistant! I can show you live matches, scores, streams, player stats, and much more. What would you like to know?",
+        "Here's what I can do:\n✓ Show live matches\n✓ Get live scores\n✓ Find YouTube streams\n✓ Search team matches\n✓ Tournament information\n✓ Player stats\nHow can I assist you?"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks", "Thank you", "Thanks a lot", "Appreciate it",
+        "That's helpful", "Awesome", "Great", "Perfect", "Excellent"
+      ],
+      "responses": [
+        "You're welcome! Enjoy the cricket!",
+        "Happy to help! Let me know if you need anything else!",
+        "Glad I could help! Keep watching cricket!",
+        "You're welcome! Feel free to ask anytime!"
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": [
+        "I'm not sure I understand. Could you rephrase that? I can help with live scores, matches, streams, and cricket information!",
+        "Sorry, I didn't get that. Try asking about live matches, scores, or streams!",
+        "I specialize in cricket! Ask me about live matches, scores, streams, or player information!",
+        "Could you be more specific? I can help with cricket scores, matches, and streams!"
+      ]
+    },
+    {
+      "tag": "match_result",
+      "patterns": [
+        "Who won", "Match result", "Final score", "Match outcome",
+        "Who is winning", "Winner", "Did India win", "Match winner"
+      ],
+      "responses": [
+        "Let me check the match result for you!",
+        "I'll find out who won that match!",
+        "Getting the match result...",
+        "Let me look up the final score and winner!"
+      ],
+      "action": "get_result"
+    },
+    {
+      "tag": "match_highlights",
+      "patterns": [
+        "Match highlights", "Show highlights", "Replay", "Best moments",
+        "Key moments", "Match summary", "Highlights video"
+      ],
+      "responses": [
+        "I can help you find match highlights! Check YouTube for highlight videos.",
+        "Looking for highlights? I'll search for highlight videos!",
+        "Let me find match highlights for you!",
+        "Searching for the best moments from the match..."
+      ],
+      "action": "get_highlights"
+    },
+    {
+      "tag": "venue_info",
+      "patterns": [
+        "Where is the match", "Venue", "Stadium", "Location",
+        "Where are they playing", "Match venue", "Ground information"
+      ],
+      "responses": [
+        "Let me get the venue information for you!",
+        "I'll find out where the match is being played!",
+        "Checking the match venue...",
+        "Getting stadium details for you!"
+      ],
+      "action": "get_venue"
+    },
+    {
+      "tag": "toss_info",
+      "patterns": [
+        "Who won the toss", "Toss result", "Toss decision",
+        "What did they choose", "Batting or bowling first"
+      ],
+      "responses": [
+        "Let me check the toss information!",
+        "I'll find out who won the toss and what they chose!",
+        "Getting toss details for you...",
+        "Checking the toss result!"
+      ],
+      "action": "get_toss"
+    }
+  ]
+}
