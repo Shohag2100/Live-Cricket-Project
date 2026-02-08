@@ -61,10 +61,22 @@ TEMPLATES = [
     },
 ]
 
+# PostgreSQL (production / development)
+# Configure via environment variables in `./.env`.
+POSTGRES_DB = config('POSTGRES_DB', default='cricket')
+POSTGRES_USER = config('POSTGRES_USER', default='cricket_user')
+POSTGRES_PASSWORD = config('POSTGRES_PASSWORD', default='password')
+POSTGRES_HOST = config('POSTGRES_HOST', default='localhost')
+POSTGRES_PORT = config('POSTGRES_PORT', default='5432')
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': POSTGRES_DB,
+        'USER': POSTGRES_USER,
+        'PASSWORD': POSTGRES_PASSWORD,
+        'HOST': POSTGRES_HOST,
+        'PORT': POSTGRES_PORT,
     }
 }
 
