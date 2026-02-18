@@ -1,0 +1,1054 @@
+/* Add these styles at the top of your HomePage.css file */
+
+/* ========== HOME PAGE MAIN STYLES ========== */
+
+.home-page-cricket {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d2b1f 0%, #1a472a 25%, #0f3f2f 50%, #0d7a66 75%, #00b894 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+/* ========== 3D BACKGROUND ANIMATION ========== */
+
+.hero-background-3d {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.floating-cricket-ball {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 30% 30%, #ff6b35, #ff3a00);
+  border-radius: 50%;
+  top: 10%;
+  right: 10%;
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 20px 60px rgba(255, 107, 53, 0.4);
+}
+
+.floating-bat {
+  position: absolute;
+  width: 120px;
+  height: 20px;
+  background: linear-gradient(90deg, #8b4513, #d4a574);
+  border-radius: 10px;
+  top: 30%;
+  left: 5%;
+  animation: float-bat 5s ease-in-out infinite;
+  transform: rotate(-45deg);
+  box-shadow: 0 15px 40px rgba(139, 69, 19, 0.5);
+}
+
+.floating-stumps {
+  position: absolute;
+  font-size: 5rem;
+  bottom: 15%;
+  right: 5%;
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-30px) scale(1.1); }
+}
+
+@keyframes float-bat {
+  0%, 100% { transform: rotate(-45deg) translateY(0px); }
+  50% { transform: rotate(-45deg) translateY(-20px); }
+}
+
+/* ========== TOP NAVIGATION BAR ========== */
+
+.top-nav-cricket {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(13, 43, 31, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid rgba(0, 184, 148, 0.3);
+  z-index: 100;
+  padding: 15px 0;
+}
+
+.nav-content-cricket {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-logo-cricket {
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #00e5cc, #00b894);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+}
+
+.nav-links-cricket {
+  display: flex;
+  gap: 5px;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links-cricket button {
+  padding: 10px 20px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.nav-links-cricket button:hover {
+  color: #00e5cc;
+  background: rgba(0, 184, 148, 0.1);
+}
+
+.nav-links-cricket button.active {
+  color: #00e5cc;
+  background: rgba(0, 184, 148, 0.2);
+  border-bottom: 2px solid #00e5cc;
+}
+
+.nav-user-cricket {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap;
+}
+
+.user-greeting-cricket {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav-signin-btn-cricket,
+.nav-signup-btn-cricket,
+.logout-btn-cricket {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-signin-btn-cricket {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(0, 184, 148, 0.3);
+}
+
+.nav-signin-btn-cricket:hover {
+  background: rgba(0, 184, 148, 0.2);
+  border-color: #00b894;
+}
+
+.nav-signup-btn-cricket {
+  background: linear-gradient(135deg, #00b894, #00e5cc);
+  color: #fff;
+}
+
+.nav-signup-btn-cricket:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 184, 148, 0.4);
+}
+
+.logout-btn-cricket {
+  background: rgba(255, 59, 48, 0.2);
+  border: 1px solid rgba(255, 59, 48, 0.5);
+  color: #ff3b30;
+}
+
+.logout-btn-cricket:hover {
+  background: rgba(255, 59, 48, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ========== HERO SECTION ========== */
+
+.hero-section-cricket {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content-cricket {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-text-cricket {
+  animation: slideInLeft 1s ease;
+}
+
+.hero-title-cricket {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.title-gradient {
+  background: linear-gradient(135deg, #00e5cc, #00b894, #ffd700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-subtitle-cricket {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.hero-stats-cricket {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat-item-cricket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 184, 148, 0.1);
+  border: 1px solid rgba(0, 184, 148, 0.3);
+  border-radius: 12px;
+  min-width: 120px;
+}
+
+.stat-number-cricket {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #00e5cc;
+}
+
+.stat-label-cricket {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 5px;
+}
+
+.hero-image-cricket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInRight 1s ease;
+}
+
+.animated-card-3d {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner-3d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  animation: cardFloat 4s ease-in-out infinite;
+}
+
+.animated-card-3d:hover .card-inner-3d {
+  transform: rotateY(180deg);
+}
+
+.card-front-3d,
+.card-back-3d {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8rem;
+  border-radius: 25px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+  border: 3px solid rgba(0, 184, 148, 0.3);
+}
+
+.card-front-3d {
+  background: linear-gradient(135deg, rgba(0, 184, 148, 0.3), rgba(0, 229, 204, 0.3));
+  backdrop-filter: blur(20px);
+}
+
+.card-back-3d {
+  transform: rotateY(180deg);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 165, 0, 0.3));
+  backdrop-filter: blur(20px);
+}
+
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0px) rotateX(5deg); }
+  50% { transform: translateY(-30px) rotateX(5deg); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* ========== MAIN CONTENT SECTION ========== */
+
+.main-content-section-cricket {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.tab-content-cricket {
+  animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-header-cricket {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header-cricket h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #00e5cc, #ffd700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-header-cricket p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ========== LIVE SCORES ========== */
+
+.matches-grid-cricket {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.match-card-cricket {
+  background: rgba(20, 40, 35, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 184, 148, 0.3);
+  border-radius: 20px;
+  padding: 25px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.match-card-cricket::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 229, 204, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.match-card-cricket:hover::before {
+  left: 100%;
+}
+
+.match-card-cricket:hover {
+  transform: translateY(-10px);
+  border-color: #00b894;
+  box-shadow: 0 20px 50px rgba(0, 184, 148, 0.3);
+}
+
+.match-header-cricket {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.live-badge-cricket {
+  background: linear-gradient(135deg, #ff3a00, #ff6b35);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.format-badge-cricket {
+  background: rgba(0, 184, 148, 0.3);
+  color: #00e5cc;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid rgba(0, 184, 148, 0.5);
+}
+
+.match-teams-cricket {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.team-cricket {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.team-flag-cricket {
+  font-size: 2.5rem;
+}
+
+.team-info-cricket h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.score-cricket {
+  font-size: 1.3rem;
+  color: #00e5cc;
+  font-weight: 700;
+}
+
+.match-divider-cricket {
+  font-weight: 800;
+  color: rgba(0, 184, 148, 0.5);
+  font-size: 1.2rem;
+}
+
+.match-details-cricket {
+  background: rgba(0, 184, 148, 0.1);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.match-venue-cricket,
+.match-overs-cricket {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 5px 0;
+}
+
+.view-details-btn-cricket {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #00b894, #00e5cc);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-details-btn-cricket:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 184, 148, 0.3);
+}
+
+/* ========== LIVE STREAMS ========== */
+
+.streams-grid-cricket {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.stream-card-cricket {
+  background: rgba(20, 40, 35, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 184, 148, 0.3);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+.stream-card-cricket:hover {
+  transform: translateY(-10px);
+  border-color: #00b894;
+  box-shadow: 0 20px 50px rgba(0, 184, 148, 0.3);
+}
+
+.stream-thumbnail-cricket {
+  position: relative;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(0, 184, 148, 0.3), rgba(0, 229, 204, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stream-icon-cricket {
+  font-size: 5rem;
+}
+
+.stream-live-badge-cricket {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, #ff3a00, #ff6b35);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.stream-info-cricket {
+  padding: 20px;
+}
+
+.stream-info-cricket h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.stream-meta-cricket {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.stream-viewers-cricket {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.stream-platform-cricket {
+  color: #00e5cc;
+  font-weight: 700;
+}
+
+.watch-stream-btn-cricket {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff6b35, #ff3a00);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.watch-stream-btn-cricket:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 107, 53, 0.4);
+}
+
+/* ========== CRICKET HISTORY ========== */
+
+.history-timeline-cricket {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.history-timeline-cricket::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #00b894, #00e5cc);
+}
+
+.history-card-cricket {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.history-card-cricket.left {
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.history-card-cricket.right {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.history-icon-cricket {
+  font-size: 4rem;
+  min-width: 100px;
+  text-align: center;
+  z-index: 2;
+}
+
+.history-content-cricket {
+  flex: 1;
+  max-width: 400px;
+  background: rgba(20, 40, 35, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 184, 148, 0.3);
+  border-radius: 20px;
+  padding: 25px;
+  transition: all 0.35s ease;
+}
+
+.history-content-cricket:hover {
+  transform: scale(1.05);
+  border-color: #00b894;
+  box-shadow: 0 20px 50px rgba(0, 184, 148, 0.3);
+}
+
+.history-year-cricket {
+  display: inline-block;
+  background: linear-gradient(135deg, #00b894, #00e5cc);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.history-content-cricket h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #00e5cc;
+}
+
+.history-content-cricket p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+/* ========== FEATURES SECTION ========== */
+
+.features-section-cricket {
+  padding: 80px 20px;
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.features-grid-cricket {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card-cricket {
+  background: rgba(20, 40, 35, 0.6);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 184, 148, 0.2);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.feature-card-cricket:hover {
+  transform: translateY(-10px);
+  border-color: #00b894;
+  background: rgba(0, 184, 148, 0.15);
+}
+
+.feature-icon-cricket {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  animation: iconBounce 2s ease-in-out infinite;
+}
+
+.feature-card-cricket:nth-child(1) .feature-icon-cricket { animation-delay: 0s; }
+.feature-card-cricket:nth-child(2) .feature-icon-cricket { animation-delay: 0.2s; }
+.feature-card-cricket:nth-child(3) .feature-icon-cricket { animation-delay: 0.4s; }
+.feature-card-cricket:nth-child(4) .feature-icon-cricket { animation-delay: 0.6s; }
+
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.feature-card-cricket h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #00e5cc;
+}
+
+.feature-card-cricket p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ========== CHATBOT WIDGET ========== */
+
+.chatbot-widget-cricket {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 380px;
+  height: 550px;
+  background: rgba(20, 40, 35, 0.98);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(0, 184, 148, 0.4);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transform: translateY(700px);
+  transition: all 0.35s ease;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.chatbot-widget-cricket.active {
+  transform: translateY(0);
+}
+
+.chatbot-header-cricket {
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 184, 148, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header-cricket h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #00e5cc;
+}
+
+.close-chat-btn-cricket {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.close-chat-btn-cricket:hover {
+  color: #00b894;
+  transform: rotate(90deg);
+}
+
+.chatbot-messages-cricket {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chat-message-cricket {
+  display: flex;
+  animation: messageSlide 0.3s ease;
+}
+
+@keyframes messageSlide {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-message-cricket.user {
+  justify-content: flex-end;
+}
+
+.chat-message-cricket.bot {
+  justify-content: flex-start;
+}
+
+.message-content-cricket {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.chat-message-cricket.user .message-content-cricket {
+  background: linear-gradient(135deg, #00b894, #00e5cc);
+  color: #fff;
+}
+
+.chat-message-cricket.bot .message-content-cricket {
+  background: rgba(0, 184, 148, 0.2);
+  border: 1px solid rgba(0, 184, 148, 0.3);
+  color: #fff;
+}
+
+.chatbot-form-cricket {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  border-top: 1px solid rgba(0, 184, 148, 0.2);
+}
+
+.chatbot-form-cricket input {
+  flex: 1;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(0, 184, 148, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.chatbot-form-cricket input:focus {
+  outline: none;
+  border-color: #00b894;
+  background: rgba(0, 184, 148, 0.1);
+}
+
+.chatbot-form-cricket button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #00b894, #00e5cc);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chatbot-form-cricket button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+}
+
+/* Chatbot Sign In Required */
+.chatbot-signin-required-cricket {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  height: 100%;
+}
+
+.signin-icon-cricket {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.chatbot-signin-required-cricket h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #00e5cc;
+}
+
+.chatbot-signin-required-cricket p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.chatbot-signin-btn-cricket,
+.chatbot-signup-btn-cricket,
+.chatbot-close-btn-cricket {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.chatbot-signin-btn-cricket {
+  background: linear-gradient(135deg, #00b894, #00e5cc);
+  color: #fff;
+}
+
+.chatbot-signin-btn-cricket:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+}
+
+.chatbot-signup-btn-cricket {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(0, 184, 148, 0.3);
+}
+
+.chatbot-signup-btn-cricket:hover {
+  background: rgba(0, 184, 148, 0.2);
+}
+
+.chatbot-close-btn-cricket {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chatbot-close-btn-cricket:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Chat Toggle Button */
+.chat-toggle-btn-cricket {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, #00b894, #00e5cc);
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 999;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 184, 148, 0.4);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.chat-toggle-btn-cricket:hover {
+  transform: scale(1.15);
+  box-shadow: 0 15px 40px rgba(0, 184, 148, 0.6);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 968px) {
+  .nav-content-cricket {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav-links-cricket {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .hero-content-cricket {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-title-cricket {
+    font-size: 2.5rem;
+  }
+
+  .hero-stats-cricket {
+    justify-content: center;
+  }
+
+  .history-timeline-cricket::before {
+    left: 30px;
+  }
+
+  .history-card-cricket.left,
+  .history-card-cricket.right {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 80px;
+  }
+
+  .history-icon-cricket {
+    position: absolute;
+    left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .chatbot-widget-cricket {
+    width: calc(100% - 40px);
+    height: 450px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .chat-toggle-btn-cricket {
+    bottom: 20px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
+  }
+
+  .matches-grid-cricket,
+  .streams-grid-cricket {
+    grid-template-columns: 1fr;
+  }
+}

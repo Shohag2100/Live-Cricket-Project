@@ -1,0 +1,30 @@
+{
+  "name": "live-cricket-project",
+  "version": "1.0.0",
+  "description": "A live cricket project that provides features for cricket enthusiasts.",
+  "main": "src/main.tsx",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.4.3",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.27.1"
+  },
+  "keywords": [
+    "cricket",
+    "live",
+    "sports",
+    "react"
+  ],
+  "author": "Shohag2100",
+  "license": "MIT"
+}
